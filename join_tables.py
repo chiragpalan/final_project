@@ -5,8 +5,8 @@ import tempfile
 import os
 
 # GitHub URLs for the databases
-URL_DB_A = "https://raw.githubusercontent.com/chiragpalan/time_series_prediction_v1/main/stock_data.db"
-URL_DB_B = "https://raw.githubusercontent.com/chiragpalan/time_series_prediction_v1/main/technical_features.db"
+URL_DB_A = "https://raw.githubusercontent.com/chiragpalan/final_project/main/database/stock_data.db"
+URL_DB_B = "https://raw.githubusercontent.com/chiragpalan/final_project/main/database/technical_features.db"
 
 # Helper function to download a file and save it to a temporary location
 def download_db(url):
@@ -26,7 +26,7 @@ conn_a = sqlite3.connect(db_a_path)
 conn_b = sqlite3.connect(db_b_path)
 
 # Create a new SQLite database to store the joined results
-conn_result = sqlite3.connect("joined_data.db")
+conn_result = sqlite3.connect("database/joined_data.db")
 
 # Fetch the table names from database A
 cursor_a = conn_a.cursor()
