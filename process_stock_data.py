@@ -5,7 +5,7 @@ import tempfile
 import os
 
 # Step 1: Download the stock_data.db from GitHub
-url = "https://raw.githubusercontent.com/chiragpalan/time_series_prediction_v1/main/stock_data.db"
+url = "https://raw.githubusercontent.com/chiragpalan/time_series_prediction_v1/main/database/stock_data.db"
 response = requests.get(url)
 if response.status_code != 200:
     raise Exception(f"Failed to download database. Status code: {response.status_code}")
@@ -21,7 +21,7 @@ with sqlite3.connect(temp_db_file_path) as source_conn:
     source_conn.backup(conn_stock)  # Backup from downloaded db to in-memory db
 
 # Step 4: Create a new SQLite database to store technical features
-conn_tech = sqlite3.connect('technical_features.db')
+conn_tech = sqlite3.connect('database/technical_features.db')
 
 # Helper function to calculate pivot points and support/resistance levels
 def calculate_pivot_points(df):
