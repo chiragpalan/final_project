@@ -5,7 +5,7 @@ import tempfile
 import os
 
 # Step 1: Download the stock_data.db from GitHub
-url = "https://raw.githubusercontent.com/chiragpalan/time_series_prediction_v1/main/database/stock_data.db"
+url = "https://raw.githubusercontent.com/chiragpalan/final_project/main/database/stock_data.db"
 response = requests.get(url)
 if response.status_code != 200:
     raise Exception(f"Failed to download database. Status code: {response.status_code}")
