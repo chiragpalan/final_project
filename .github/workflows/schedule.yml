@@ -1,4 +1,4 @@
-name: Fetch Stock Data Daily
+name: Fetch Daily Stock Data
 
 on:
   schedule:
