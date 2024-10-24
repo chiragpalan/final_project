@@ -28,6 +28,6 @@ jobs:
       run: |
         git config --local user.name "github-actions[bot]"
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git add joined_data.db
+        git add database/joined_data.db
         git commit -m "Update joined_data.db"
         git push
