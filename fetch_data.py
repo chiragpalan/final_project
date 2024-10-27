@@ -30,7 +30,7 @@ if __name__ == "__main__":
     fetch_and_store_data("TCS.NS", TABLE_TCS)
     fetch_and_store_data('^NSEI', TABLE_NIFTY)
     fetch_and_store_data("ASIANPAINT.NS", TABLE_ASIAN)
-    fetch_and_store_data("IDFCFIRSTB.NS", "TABLE_IDFCFIRSTB")
+    fetch_and_store_data("IDFCFIRSTB.NS", TABLE_IDFCFIRSTB)
     
 
 
