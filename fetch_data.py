@@ -14,6 +14,7 @@ TABLE_RELIANCE = "reliance_data"
 TABLE_TCS = "tcs_data"
 TABLE_NIFTY = "nifty_data"
 TABLE_ASIAN = "asian_data"
+TABLE_IDFCFIRSTB = "idfcFB_data"
 
 def fetch_and_store_data(ticker, table_name):
     # Get data for the last 3 months
@@ -29,6 +30,7 @@ if __name__ == "__main__":
     fetch_and_store_data("TCS.NS", TABLE_TCS)
     fetch_and_store_data('^NSEI', TABLE_NIFTY)
     fetch_and_store_data("ASIANPAINT.NS", TABLE_ASIAN)
+    fetch_and_store_data("IDFCFIRSTB.NS", "TABLE_IDFCFIRSTB")
     
 
 
