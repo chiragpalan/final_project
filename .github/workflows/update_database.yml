@@ -31,4 +31,5 @@ jobs:
         git config --global user.email "actions@github.com"
         git add database/technical_features.db
         git commit -m "Update technical features database"
+        git pull origin main --rebase  # Pull latest changes with rebase
         git push origin main
