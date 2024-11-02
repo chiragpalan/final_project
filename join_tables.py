@@ -54,6 +54,7 @@ for table in tables:
     joined_df = pd.merge(
         df_a, df_b, on='Date', suffixes=('_A', '_B'), how = "left")
 
+    joined_df = joined_df.replace([np.inf, -np.inf], np.nan)
     joined_df.dropna(inplace = True)
 
     # Optional: Drop duplicate columns if needed
