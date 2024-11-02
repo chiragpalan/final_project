@@ -3,6 +3,7 @@ import pandas as pd
 import requests
 import tempfile
 import os
+import numpy as np
 
 # GitHub URLs for the databases
 URL_DB_A = "https://raw.githubusercontent.com/chiragpalan/final_project/main/database/stock_data.db"
