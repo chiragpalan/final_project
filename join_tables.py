@@ -54,6 +54,8 @@ for table in tables:
     joined_df = pd.merge(
         df_a, df_b, on='Date', suffixes=('_A', '_B'), how = "left")
 
+    joined_df.dropna(inplace = True)
+
     # Optional: Drop duplicate columns if needed
     columns_to_drop = [col for col in joined_df.columns if col.endswith('_A') and col[:-2] in df_b.columns]
     joined_df.drop(columns=columns_to_drop, inplace=True)
