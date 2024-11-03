@@ -41,7 +41,7 @@ def calculate_pivot_points(df):
 
     #creating target variable - as avg of O, H, L, C of next 7 days
     df["target_n7d"] = (
-                        df[['Open', 'High', 'Low', 'Close']]
+                        df['Close']
                        .shift(-7)
                        .mean(axis = 1)
                         )
