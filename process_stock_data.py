@@ -43,8 +43,7 @@ def calculate_pivot_points(df):
     df["target_n7d"] = (
                         df['Close']
                        .shift(-7)
-                       .mean(axis = 1)
-                        )
+                       )
     return df
 
 # Step 5: Process each table and store results in the new database
