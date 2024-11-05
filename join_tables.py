@@ -56,7 +56,7 @@ for table in tables:
         df_a, df_b, on='Date', suffixes=('_A', '_B'), how = "left")
 
     joined_df = joined_df.replace([np.inf, -np.inf], np.nan)
-    joined_df.dropna(inplace = True)
+    # joined_df.dropna(inplace = True)
 
     # Optional: Drop duplicate columns if needed
     columns_to_drop = [col for col in joined_df.columns if col.endswith('_A') and col[:-2] in df_b.columns]
